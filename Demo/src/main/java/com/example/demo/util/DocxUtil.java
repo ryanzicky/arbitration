@@ -255,6 +255,6 @@ public class DocxUtil {
         String accusedName = (String) map.get("accusedName");
         new File(WordUtil.createWord(templatePath + "cover1.docx", fileDir + "1/", accusedName + "-民事案件封面(正卷)", map));
         new File(WordUtil.createWord(templatePath + "cover2.docx", fileDir + "2/", accusedName + "-民事案件封面(副卷)", map));
-        new File(WordUtil.createWord(templatePath + "contractDispute.docx", fileDir + "3/", accusedName + "-保证保险合同纠纷要素表模板", map));
+        new File(WordUtil.createWord(templatePath + "contractDispute.docx", fileDir + "3/", accusedName + "-保证保险合同纠纷要素表", map));
     }
 }

@@ -20,7 +20,7 @@ public class ContractDisputeModel {
     @Excel(name = "借款合同名称", orderNum = "1")
     private String contractName;
     @Excel(name = "合同签约时间", orderNum = "2")
-    private String contractDate;
+    private Date contractDate;
     @Excel(name = "贷款人", orderNum = "3")
     private String lender;
     @Excel(name = "借款数额", orderNum = "4")
@@ -34,7 +34,7 @@ public class ContractDisputeModel {
     @Excel(name = "罚息约定", orderNum = "8")
     private String penaltyAgreement;
     @Excel(name = "逾期日期", orderNum = "9")
-    private String overdueDate;
+    private Date overdueDate;
     @Excel(name = "本金", orderNum = "10")
     private BigDecimal principal;
     @Excel(name = "利息", orderNum = "11")
@@ -46,7 +46,7 @@ public class ContractDisputeModel {
     @Excel(name = "保证保险合同名称", orderNum = "14")
     private String guaranteeContraceName;
     @Excel(name = "保单签约时间", orderNum = "15")
-    private String guaranteeContractDate;
+    private Date guaranteeContractDate;
     @Excel(name = "投保人", orderNum = "16")
     private String policyHolder;
     @Excel(name = "被保险人", orderNum = "17")

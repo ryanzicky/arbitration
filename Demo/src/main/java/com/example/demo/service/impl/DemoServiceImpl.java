@@ -92,8 +92,12 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public void handleContractDisputeFile(ContractDisputeModel model) {
         Map<String, Object> map = CommontUtils.objectToMap(model);
+        map.put("contractDate", DateUtil.getDateFormatStr(model.getContractDate()));
+        map.put("overdueDate", DateUtil.getDateFormatStr(model.getOverdueDate()));
+        map.put("guaranteeContractDate", DateUtil.getDateFormatStr(model.getGuaranteeContractDate()));
         map.put("payoutTime", DateUtil.getDateFormatStr(model.getPayoutTime()));
         map.put("loanRate", BigDecimalUtil.getPercent().format(model.getLoanRate()));
+        map.put("date", DateUtil.getDateFormatStr(new Date()));
 
         DocxUtil.makeContractDisputeFile(map, path);
     }
