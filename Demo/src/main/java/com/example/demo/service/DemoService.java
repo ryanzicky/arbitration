@@ -1,9 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.request.ArbitrationModel;
-import com.example.demo.dao.request.DemoRequest;
-import com.example.demo.dao.request.ImportExampleModel;
-import com.example.demo.dao.request.IndictmentModel;
+import com.example.demo.dao.request.*;
 
 import java.io.File;
 
@@ -16,4 +13,6 @@ public interface DemoService {
     void handleSueFile(IndictmentModel model);
 
     void handleArbrationFile(ArbitrationModel model);
+
+    void handleContractDisputeFile(ContractDisputeModel model);
 }

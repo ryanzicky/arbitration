@@ -1,10 +1,7 @@
 package com.example.demo.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.example.demo.dao.request.ArbitrationModel;
-import com.example.demo.dao.request.DemoRequest;
-import com.example.demo.dao.request.ImportExampleModel;
-import com.example.demo.dao.request.IndictmentModel;
+import com.example.demo.dao.request.*;
 import com.example.demo.service.DemoService;
 import com.example.demo.util.*;
 import com.google.common.collect.Lists;
@@ -90,5 +87,14 @@ public class DemoServiceImpl implements DemoService {
         map.put("interest", model.getInterest().setScale(2, BigDecimal.ROUND_DOWN));
         map.put("totalAmount", model.getTotalAmount().setScale(2, BigDecimal.ROUND_DOWN));
         DocxUtil.makeArbrationFile(map, path);
+    }
+
+    @Override
+    public void handleContractDisputeFile(ContractDisputeModel model) {
+        Map<String, Object> map = CommontUtils.objectToMap(model);
+        map.put("payoutTime", DateUtil.getDateFormatStr(model.getPayoutTime()));
+        map.put("loanRate", BigDecimalUtil.getPercent().format(model.getLoanRate()));
+
+        DocxUtil.makeContractDisputeFile(map, path);
     }
 }
