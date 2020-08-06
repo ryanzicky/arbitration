@@ -31,7 +31,7 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Excel生成律师函")
+                .title("")
                 .description("更多Spring Boot相关文章请关注：https://swagger.io/")
                 .termsOfServiceUrl("https://swagger.io/")
                 .contact(new Contact("swagger", "https://swagger.io/", ""))
