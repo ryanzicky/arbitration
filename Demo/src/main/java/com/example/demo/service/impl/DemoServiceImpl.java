@@ -96,7 +96,7 @@ public class DemoServiceImpl implements DemoService {
         map.put("overdueDate", DateUtil.getDateFormatStr(model.getOverdueDate()));
         map.put("guaranteeContractDate", DateUtil.getDateFormatStr(model.getGuaranteeContractDate()));
         map.put("payoutTime", DateUtil.getDateFormatStr(model.getPayoutTime()));
-        map.put("loanRate", BigDecimalUtil.getPercent().format(model.getLoanRate()));
+//        map.put("loanRate", BigDecimalUtil.getPercent().format(model.getLoanRate()));
         map.put("date", DateUtil.getDateFormatStr(new Date()));
 
         DocxUtil.makeContractDisputeFile(map, path);

@@ -29,8 +29,10 @@ public class ContractDisputeModel {
     private String loanTerm;
     @Excel(name = "还款方式", orderNum = "6")
     private String payType;
+//    @Excel(name = "借款利率", orderNum = "7")
+//    private BigDecimal loanRate;
     @Excel(name = "借款利率", orderNum = "7")
-    private BigDecimal loanRate;
+    private String loanRate;
     @Excel(name = "罚息约定", orderNum = "8")
     private String penaltyAgreement;
     @Excel(name = "逾期日期", orderNum = "9")
