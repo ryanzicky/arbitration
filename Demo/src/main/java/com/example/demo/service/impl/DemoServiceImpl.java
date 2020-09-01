@@ -61,6 +61,8 @@ public class DemoServiceImpl implements DemoService {
         map.put("loanDate", DateUtil.getDateFormatStr(model.getLoanDate()));
         map.put("overdueDate", DateUtil.getDateFormatStr(model.getOverdueDate()));
         map.put("claimDate", DateUtil.getDateFormatStr(model.getClaimDate()));
+        map.put("insureSudDate", DateUtil.getDateFormatStr(model.getInsureSudDate()));
+        map.put("loanSendDate", DateUtil.getDateFormatStr(model.getLoanSendDate()));
 
         map.put("arrearAmount", model.getArrearAmount().setScale(2, BigDecimal.ROUND_HALF_UP));
         map.put("suspenseAmount", model.getSuspenseAmount().setScale(2, BigDecimal.ROUND_HALF_UP));

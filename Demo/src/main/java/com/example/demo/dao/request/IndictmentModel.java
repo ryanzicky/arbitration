@@ -75,4 +75,13 @@ public class IndictmentModel {
     private String branchOfficeName;
     @Excel(name = "函号", orderNum = "29")
     private String contractNo;
+    @Excel(name = "保费逾期日期", orderNum = "30")
+    private Date insureSudDate;
+    @Excel(name = "年利率", orderNum = "31")
+    private String yearRate;
+    @Excel(name = "贷款发放日期", orderNum = "32")
+    private Date loanSendDate;
+    @Excel(name = "特别约定", orderNum = "33")
+    private String specialAgreement;
+
 }
